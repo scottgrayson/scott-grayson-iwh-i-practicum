@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        title= title
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Add a New Houseplant
+        a(href="/") &larr; Return to the homepage
+        .form-wrapper
+            form(method="POST" action="/update-cobj")
+                label(for="name") Name
+                input(type="text" id="name" name="name" required)
+                label(for="species") Species
+                input(type="text" id="species" name="species" required)
+                label(for="light_level") Light Level
+                input(type="text" id="light_level" name="light_level" placeholder="low, medium, or high")
+                input(type="submit" value="Add Houseplant")

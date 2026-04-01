@@ -6,8 +6,14 @@ body, * {
     padding: 0;
 }
 
+body {
+    background-color: #fafbfc;
+    color: #333;
+}
+
 h1 {
-    margin: 1rem;
+    margin: 1.5rem 1rem 0.5rem;
+    color: #2d3e50;
 }
 
 .cards {

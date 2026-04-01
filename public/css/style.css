@@ -116,3 +116,33 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #f0f7ff;
 }
+
+.subtitle {
+    margin: 0 1rem 0.5rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+a {
+    display: inline-block;
+    margin: 1rem;
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.btn {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+}
+
+a.btn:hover {
+    background-color: #005bb5;
+    text-decoration: none;
+}

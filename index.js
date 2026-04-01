@@ -18,7 +18,15 @@ const headers = {
 
 // ROUTE 1 - Homepage: display custom object records in a table
 app.get('/', async (req, res) => {
-    res.render('homepage', { title: 'Houseplants | Integrating With HubSpot I Practicum', data: [] });
+    const apiUrl = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_TYPE}?properties=name,species,light_level`;
+    try {
+        const resp = await axios.get(apiUrl, { headers });
+        const data = resp.data.results;
+        res.render('homepage', { title: 'Houseplants | Integrating With HubSpot I Practicum', data });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error fetching custom objects');
+    }
 });
 
 // TODO: ROUTE 2 - Create a new app.get route for the form to create or update new custom object data. Send this data along in the next route.
